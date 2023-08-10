@@ -90,7 +90,7 @@ function Input(){
         <button onClick={handleCalculate}>Calculate</button>
       </div>
 
-      {<p>Result: {result} </p>}
+      {result && <p>Result: {result} </p>}
       <button onClick={ handleReset }>Reset</button>
     
     </div>
