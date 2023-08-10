@@ -63,6 +63,7 @@ function Input(){
     }; 
   }
 
+  //reset inputs, operator and result
   const handleReset = () => {
     setInput1('');
     setInput2('');
