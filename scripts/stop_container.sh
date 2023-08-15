@@ -8,3 +8,6 @@ containerid=`docker ps | awk -F " " '{print $1}'`
 
 #remove the container
 docker rm -f $containerid  
+
+# Remove all unused images (dangling images)
+docker image prune
