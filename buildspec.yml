@@ -1,0 +1,33 @@
+version: 0.2
+
+env:
+  # variables:
+     # key: "value"
+  parameter-store:
+     DOCKER_REGISTRY_USERNAME: /CodeBuild/docker_username
+     DOCKER_REGISTRY_PASSWORD: /CodeBuild/docker_password
+     # key: "value"
+  #secrets-manager:
+     # key: secret-id:json-key:version-stage:version-id
+     # key: secret-id:json-key:version-stage:version-id
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+      # name: version
+  pre_build:
+    commands:
+      - npm install
+      - echo "$DOCKER_REGISTRY_USERNAME"
+      - echo "$DOCKER_REGISTRY_PASSWORD"
+      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin
+      # - command
+  build:
+    commands:
+      - echo "Building Docker Image"
+      - docker build -t "$DOCKER_REGISTRY_USERNAME/calculator-reactjs:latest" .
+      - docker push "$DOCKER_REGISTRY_USERNAME/calculator-reactjs:latest"
+  post_build:
+    commands:
+      - echo "build is successfull"
+      # - command
