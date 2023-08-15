@@ -46,8 +46,8 @@ function Input(){
           calculateResult = num1*num2;
           break;
 
-        case '%':
-          calculateResult = num1%num2;
+        case '/':
+          calculateResult = num1/num2;
           break;
         
         default:
@@ -86,7 +86,7 @@ function Input(){
         <button onClick={ () => handleOperatorChange('+')}>+</button>
         <button onClick={ () => handleOperatorChange('-')}>-</button>
         <button onClick={ () => handleOperatorChange('*')}>*</button>
-        <button onClick={ () => handleOperatorChange('%')}>%</button>
+        <button onClick={ () => handleOperatorChange('/')}>%</button>
         <button onClick={handleCalculate}>Calculate</button>
       </div>
 
