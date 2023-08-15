@@ -5,7 +5,6 @@ import Input from './Components/Input';
 function App() {
   return (
     <div>
-      <button>I'm a button</button>
       {<Input/>}
     </div>
     
