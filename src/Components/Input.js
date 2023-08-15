@@ -78,20 +78,26 @@ function Input(){
       <div>
         <p>Operation Count: {operationCount} </p>
       </div>
-      <input type="number" placeholder="Input 1" onChange={handleInputChange1} value = {input1} />
-      <span> {operator} </span>
-      <input type="number" placeholder="Input 2"  onChange={handleInputChange2} value = {input2}/>
+    
+      <input type="number" placeholder="Input 1 " onChange={handleInputChange1} value = {input1} />
+      <span> {  operator  } </span>
+      <input type="number" placeholder="Input 2 "  onChange={handleInputChange2} value = {input2}/>
 
       <div>
         <button onClick={ () => handleOperatorChange('+')}>+</button>
         <button onClick={ () => handleOperatorChange('-')}>-</button>
         <button onClick={ () => handleOperatorChange('*')}>*</button>
-        <button onClick={ () => handleOperatorChange('/')}>%</button>
-        <button onClick={handleCalculate}>Calculate</button>
+        <button onClick={ () => handleOperatorChange('/')}>/</button>
+        <button onClick={handleCalculate}> Calculate </button>
       </div>
 
-      {result && <p>Result: {result} </p>}
-      <button onClick={ handleReset }>Reset</button>
+      <div>
+        {result && <p>Result: { result } </p>}
+      </div>
+  
+      <div>
+      <button onClick={ handleReset }> Reset </button>
+      </div>
     
     </div>
   );
