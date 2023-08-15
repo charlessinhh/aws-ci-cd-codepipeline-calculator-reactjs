@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-# echo "e"
 
 #stop the running containers(if any)
 
