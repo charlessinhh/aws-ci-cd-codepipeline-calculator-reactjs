@@ -7,4 +7,4 @@ set -e
 containerid=`docker ps | awk -F " " '{print $1}'`
 
 #remove the container
-docker rm -f $containerid 
+docker rm -f $containerid  
