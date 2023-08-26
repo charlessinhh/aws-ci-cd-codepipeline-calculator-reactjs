@@ -88,7 +88,7 @@ function Input(){
         <button onClick={ () => handleOperatorChange('-')}>-</button>
         <button onClick={ () => handleOperatorChange('*')}>*</button>
         <button onClick={ () => handleOperatorChange('/')}>/</button>
-        <button onClick={handleCalculate}> Calculate </button>
+        <button onClick={ handleCalculate }> Calculate </button>
       </div>
 
       <div>
